@@ -1,0 +1,32 @@
+﻿<Window x:Class="Практика_7_Задания.Zad5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практика_7_Задания"
+        mc:Ignorable="d"
+        Title="Zad5" Height="450" Width="500">
+    <Grid>
+        <Image Source="\Back\Les.jpg" Stretch="Fill" x:Name="Image">
+            <Image.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Лес" Click="MenuItem_Click"/>
+                    <MenuItem Header="Котята" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="Небо" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="Цветы" Click="MenuItem_Click_3"/>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Рисунки">
+                    <MenuItem Header="Лес" Click="MenuItem_Click"/>
+                    <MenuItem Header="Котята" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="Небо" Click="MenuItem_Click_2"/>
+                    <MenuItem Header="Цветы" Click="MenuItem_Click_3"/>
+                </MenuItem>
+                <MenuItem Header="Выход"/>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

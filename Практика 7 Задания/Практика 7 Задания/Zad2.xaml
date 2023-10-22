@@ -1,0 +1,55 @@
+﻿<Window x:Class="Практика_7_Задания.Zad2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Практика_7_Задания"
+        mc:Ignorable="d"
+         Title="MainWindow" Height="400" Width="400">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="Добавить" Click="menuItemAdd_Click"/>
+            <MenuItem Header="Удалить" Click="menuItemDel_Click"/>
+            <MenuItem Header="Переместить" Click="menuItemMove_Click"/>
+        </ContextMenu>
+    </Window.ContextMenu>
+    <Grid Background="Gray">
+        <Menu VerticalAlignment="Top">
+            <MenuItem x:Name="menuItemCommand" Header="Командное меню">
+                <MenuItem Header="Добавить" x:Name="menuItemAdd" Click="menuItemAdd_Click"/>
+                <MenuItem Header="Удалить" x:Name="menuItemDel" Click="menuItemDel_Click"/>
+                <MenuItem Header="Переслать" x:Name="menuItemMove" Click="menuItemMove_Click"/>
+                <MenuItem Header="Уведомить" x:Name="Uved">
+                    <MenuItem Header="Сообщение 1" Name="Message" Click="Message_Click"/>
+                    <MenuItem Header="Сообщение 2" Click="Message_Click"/>
+                    <MenuItem Header="Сообщение 3" Click="Message_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Стиль ползунка" x:Name="menuItemTrackBar">
+                <MenuItem Header="Пусто" x:Name="menuItemNone" Click="menuItemNone_Click"/>
+                <MenuItem Header="Сверху-слева" x:Name="menuItemTopLeft" Click="menuItemNone_Click"/>
+                <MenuItem Header="Снизу-справа" x:Name="menuItemBottomRight" Click="menuItemNone_Click"/>
+                <MenuItem Header="С обеих сторон" x:Name="menuItemBoth" Click="menuItemNone_Click"/>
+                <MenuItem Header="Ориетация" x:Name="OrientM">
+                    <MenuItem Header="Вертикальная" x:Name="PozVertical" Click="PozVertical_Click"/>
+                    <MenuItem Header="Горизонтальная" x:Name="PozGoriz" Click="PozVertical_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="menuItemAbout" Header="О программе"/>
+        </Menu>
+        <Slider x:Name="sl" Value="0" Minimum="0" Maximum="100" SelectionStart="0" Height="30" IsSelectionRangeEnabled="True" Width="200" VerticalAlignment="Center">
+            <Slider.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Пусто" Click="menuItemNone_Click"/>
+                    <MenuItem Header="Сверху-слева" Click="menuItemNone_Click"/>
+                    <MenuItem Header="Снизу-справа" Click="menuItemNone_Click" IsCheckable="True"/>
+                    <MenuItem Header="С обеих сторон" Click="menuItemNone_Click"/>
+                    <MenuItem Header="Ориентация" x:Name="OrientC">
+                        <MenuItem Header="Вертикальная" Click="PozVertical_Click" />
+                        <MenuItem Header="Горизонтальная" Click="PozVertical_Click"/>
+                    </MenuItem>
+                </ContextMenu>
+            </Slider.ContextMenu>
+        </Slider>
+    </Grid>
+</Window>
